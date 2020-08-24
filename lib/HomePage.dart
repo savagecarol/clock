@@ -1,3 +1,4 @@
+import 'package:clock/ClockView.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,8 +19,9 @@ class _HomePageState extends State<HomePage> {
     t = MediaQuery.of(context).textScaleFactor * h;
     return Scaffold(
         body: Container(
+          alignment: Alignment.center,
       color: Color(0xFF2D2F41),
-
+      child:ClockView(),
 
       
     ));
