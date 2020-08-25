@@ -21,8 +21,8 @@ class _ClockViewState extends State<ClockView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 300,
+      width: 230,
+      height: 230,
       child: Transform.rotate(
         angle: -pi / 2,
         child: CustomPaint(
