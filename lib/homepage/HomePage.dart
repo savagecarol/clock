@@ -57,11 +57,14 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   g.text('Clock', Colors.white, 24.0),
+
+
+                  
                   g.spaceh(8),
                   g.text(formattedTime, Colors.white, 56),
-                  g.text('Clock', Colors.white, 20),
-                  ClockView(),
-                  g.text(formattedDate, Colors.white, 20),
+                   g.text(formattedDate, Colors.white, 20),
+                  Container(child:Center(child:ClockView()),alignment: Alignment.center,),
+                  g.text('Timezone', Colors.white, 20),
                   g.spaceh(8),
                   Row(
                     children: <Widget>[
