@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:clock/ClockPainter.dart';
+import 'package:clock/clock/ClockPainter.dart';
 import 'package:flutter/material.dart';
 
 class ClockView extends StatefulWidget {
@@ -10,19 +10,19 @@ class ClockView extends StatefulWidget {
 }
 
 class _ClockViewState extends State<ClockView> {
-  @override
-  void initState() {
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      setState(() {});
-    });
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   Timer.periodic(Duration(seconds: 1), (timer) {
+  //     setState(() {});
+  //   });
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 230,
-      height: 230,
+      width: 300,
+      height: 300,
       child: Transform.rotate(
         angle: -pi / 2,
         child: CustomPaint(

@@ -1,5 +1,5 @@
-import 'package:clock/ClockView.dart';
-import 'package:clock/genralwidget.dart';
+import 'package:clock/clock/ClockView.dart';
+import 'package:clock/widgets/genralwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -31,50 +31,44 @@ class _HomePageState extends State<HomePage> {
     t = MediaQuery.of(context).textScaleFactor * h;
     return Scaffold(
         backgroundColor: Color(0xFF2D2F41),
-        body: Row(
-          children: <Widget>[
-          
+        body: Row(children: <Widget>[
           Column(
-            
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton(
-                  onPressed: () {},
-                  child: Column(
-                    children: <Widget>[
-                      FlutterLogo(),
-                      g.text('Clock', Colors.white, 14),
-                    ],
-                  ))
+              g.menubutton('clock', 'assets/clock.png'),
+                  g.menubutton('alarm',
+                      'assets/clock.png'),
+                  g.menubutton('timer',
+                      'assets/clock.png'),
+                  g.menubutton('stopwatch',
+                     'assets/clock.png'),
             ],
           ),
-
           VerticalDivider(
             color: Colors.white24,
             width: 1,
           ),
-
           Expanded(
-                      child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 32,vertical: 64),
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 64),
               alignment: Alignment.center,
               color: Color(0xFF2D2F41),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   g.text('Clock', Colors.white, 24.0),
-                  g.spaceh(32),
-                  g.text(formattedTime, Colors.white, 64),
+                  g.spaceh(8),
+                  g.text(formattedTime, Colors.white, 56),
                   g.text('Clock', Colors.white, 20),
                   ClockView(),
                   g.text(formattedDate, Colors.white, 20),
-                  g.spaceh(16),
+                  g.spaceh(8),
                   Row(
                     children: <Widget>[
                       g.icon(Icons.language, Colors.white),
                       g.spacew(16),
-                      g.text(
-                          'UTC' + offestsign + timezoneeString, Colors.white, 14),
+                      g.text('UTC' + offestsign + timezoneeString, Colors.white,
+                          14),
                     ],
                   )
                 ],

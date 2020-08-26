@@ -1,4 +1,4 @@
-import 'package:clock/HomePage.dart';
+import 'package:clock/homepage/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

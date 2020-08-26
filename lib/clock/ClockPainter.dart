@@ -6,7 +6,6 @@ import 'package:flutter/rendering.dart';
 class ClockPainter extends CustomPainter {
   var dateTime = DateTime.now();
 
-//
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -75,10 +74,10 @@ class ClockPainter extends CustomPainter {
     var innerCircleRadius = radius - 14;
     for (double i = 0; i < 360; i += 12) {
       var x1 = centerx + outerCircleRadius * cos(i * pi / 180);
-      var y1 = centerx + outerCircleRadius * sin(i * pi / 180);
+      var y1 = centery + outerCircleRadius * sin(i * pi / 180);
 
        var x2 = centerx + innerCircleRadius * cos(i * pi / 180);
-      var y2 = centerx + innerCircleRadius * sin(i * pi / 180);
+      var y2 = centery + innerCircleRadius * sin(i * pi / 180);
 
       canvas.drawLine(Offset(x1, y1), Offset(x2, y2), dashBrush);
 
