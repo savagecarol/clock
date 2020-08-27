@@ -35,13 +35,13 @@ class _HomePageState extends State<HomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              g.menubutton('clock', 'assets/clock.png'),
-                  g.menubutton('alarm',
-                      'assets/clock.png'),
-                  g.menubutton('timer',
-                      'assets/clock.png'),
-                  g.menubutton('stopwatch',
-                     'assets/clock.png'),
+              g.menubutton('Clock', 'assets/clock.png'),
+                  g.menubutton('Alarm',
+                      'assets/alarm.png'),
+                  g.menubutton('Timer',
+                      'assets/timer.png'),
+                  g.menubutton('Stopwatch',
+                     'assets/stopwatch.png'),
             ],
           ),
           VerticalDivider(
@@ -50,28 +50,26 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 64),
+              padding: EdgeInsets.symmetric(horizontal: 32, vertical: 64),
               alignment: Alignment.center,
               color: Color(0xFF2D2F41),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  g.text('Clock', Colors.white, 24.0),
-
-
-                  
-                  g.spaceh(8),
-                  g.text(formattedTime, Colors.white, 56),
-                   g.text(formattedDate, Colors.white, 20),
+                  g.text('Clock', Colors.white, t * .04),                  
+                  g.spaceh(h * .01),
+                  g.text(formattedTime, Colors.white, t * .05),
+                   g.text(formattedDate, Colors.white, t * .02),
                   Container(child:Center(child:ClockView()),alignment: Alignment.center,),
-                  g.text('Timezone', Colors.white, 20),
-                  g.spaceh(8),
+                  g.spaceh(h * .01),
+                  g.text('Timezone', Colors.white, t * .04),
+                  g.spaceh(h * .01 /2),
                   Row(
                     children: <Widget>[
                       g.icon(Icons.language, Colors.white),
-                      g.spacew(16),
+                      g.spacew(w * .01),
                       g.text('UTC' + offestsign + timezoneeString, Colors.white,
-                          14),
+                          t * .02),
                     ],
                   )
                 ],

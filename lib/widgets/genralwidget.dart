@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,17 +27,16 @@ class Genral {
   }
 
   menubutton(String title, String image) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
-      child: FlatButton(
-        onPressed: () {},
-        child: Column(
-          children: <Widget>[
-            Image.asset(image,scale:11),
-            spaceh(16),
-            text(title, Colors.white, 14),
-          ],
-        ),
+    return FlatButton(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      color: title == 'Clock' ? Colors.pinkAccent : Colors.transparent,
+      onPressed: () {},
+      child: Column(
+        children: <Widget>[
+          Image.asset(image,scale:11),
+          spaceh(16),
+          text(title, Colors.white, 14),
+        ],
       ),
     );
   }

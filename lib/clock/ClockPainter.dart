@@ -12,7 +12,7 @@ class ClockPainter extends CustomPainter {
     var centerx = size.width / 2;
     var centery = size.height / 2;
     var center = Offset(centerx, centery);
-    var radius = min(centerx, centery);
+    var radius = min(centerx, centery) * .95;
 
     var fillBrush = Paint()..color = Color(0xFF444974);
 
