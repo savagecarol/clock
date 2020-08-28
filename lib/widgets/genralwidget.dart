@@ -10,6 +10,12 @@ class Genral {
     return Text(str, style: GoogleFonts.oswald(color: a, fontSize: size));
   }
 
+   textwithstyle(var str, Color a, double size,FontWeight p) {
+    return Text(str, style: GoogleFonts.oswald(color: a, fontSize: size ,fontWeight: p));
+  }
+
+
+
   spaceh(double h) {
     return SizedBox(
       height: h,

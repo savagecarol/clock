@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                 builder: (BuildContext context, MenuInfo value, Widget child) {
               if (value.menuType == MenuType.clock)
                 return ClockPage();
-              else if (value.menuType == MenuType.clock)
+              else if (value.menuType == MenuType.alarm)
                 return AlarmPage();
               else
                 return Container(child: Text("jain mata di"));
