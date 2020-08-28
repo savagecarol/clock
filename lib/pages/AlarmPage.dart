@@ -3,7 +3,9 @@ import 'package:clock/widgets/theme_data.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:clock/enum/data.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
+import '../main.dart';
 
 class AlarmPage extends StatefulWidget {
   @override
@@ -95,22 +97,22 @@ class _AlarmPageState extends State<AlarmPage> {
                     color: Colors.blue[100],
                     borderType: BorderType.RRect,
                     radius: Radius.circular(12),
-                                      child: Container(
-                                        width: double.infinity,
-                      
+                    child: Container(
+                      width: double.infinity,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: GradientColors.sea,
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-       
+                        gradient: LinearGradient(
+                          colors: GradientColors.sea,
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       height: 100,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          scheduleAlarm();
+                        },
                         child: Column(
                           children: <Widget>[
                             Image.asset(
@@ -129,5 +131,33 @@ class _AlarmPageState extends State<AlarmPage> {
             )
           ],
         ));
+  }
+
+  void scheduleAlarm() async {
+    var scheduledNotificationDateTime =
+        DateTime.now().add(Duration(seconds: 10));
+
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+      'alarm_notif',
+      'alarm_notif',
+      'Channel for Alarm notification',
+      icon: 'codex_logo',
+      sound: RawResourceAndroidNotificationSound('a_long_cold_sting'),
+      largeIcon: DrawableResourceAndroidBitmap('@mipmap/ic_launcher'),
+    );
+
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails(
+        sound: 'a_long_cold_sting.wav',
+        presentAlert: true,
+        presentBadge: true,
+        presentSound: true);
+    var platformChannelSpecifics = NotificationDetails(
+        androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.schedule(
+        0,
+        'Office',
+        'Good morning! Time for office.',
+        scheduledNotificationDateTime,
+        platformChannelSpecifics);
   }
 }

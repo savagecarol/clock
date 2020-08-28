@@ -11,7 +11,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  var initializationSettingsAndroid = AndroidInitializationSettings('alarm');
+  var initializationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
 
   var initializationSettingsIos= IOSInitializationSettings(
     requestAlertPermission: true,
@@ -30,6 +30,8 @@ void main() async {
   });
   runApp(MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   @override
