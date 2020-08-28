@@ -1,6 +1,9 @@
 
+import 'package:clock/enum/menu_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 
 class Genral {
   text(var str, Color a, double size) {
@@ -26,18 +29,6 @@ class Genral {
     );
   }
 
-  menubutton(String title, String image) {
-    return FlatButton(
-      padding: const EdgeInsets.symmetric(vertical: 30),
-      color: title == 'Clock' ? Colors.pinkAccent : Colors.transparent,
-      onPressed: () {},
-      child: Column(
-        children: <Widget>[
-          Image.asset(image,scale:11),
-          spaceh(16),
-          text(title, Colors.white, 14),
-        ],
-      ),
-    );
-  }
+
+
 }
