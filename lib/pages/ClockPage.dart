@@ -40,7 +40,7 @@ class _ClockPageState extends State<ClockPage> {
           g.spaceh(h * .01 / 2),
           Row(
             children: <Widget>[
-              g.icon(Icons.language, Colors.white),
+              g.icon(Icons.language, Colors.white , 24),
               g.spacew(w * .01),
               g.text(
                   'UTC' + offestsign + timezoneeString, Colors.white, t * .02),

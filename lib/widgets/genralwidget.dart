@@ -1,17 +1,17 @@
 
-import 'package:clock/enum/menu_info.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
 
 
 class Genral {
-  text(var str, Color a, double size) {
-    return Text(str, style: GoogleFonts.oswald(color: a, fontSize: size));
+  text(var str, Color color, double size) {
+    return Text(str, style: GoogleFonts.oswald(color: color, fontSize: size));
   }
 
    textwithstyle(var str, Color a, double size,FontWeight p) {
-    return Text(str, style: GoogleFonts.oswald(color: a, fontSize: size ,fontWeight: p));
+    return Text(str, style: GoogleFonts.exo(color: a, fontSize: size ,fontWeight: p));
   }
 
 
@@ -28,10 +28,11 @@ class Genral {
     );
   }
 
-  icon(IconData a, Color b) {
+  icon(IconData icon, Color color,double size) {
     return Icon(
-      a,
-      color: b,
+      icon,
+      color: color,
+      size : size,
     );
   }
 
