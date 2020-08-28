@@ -106,13 +106,7 @@ class _AlarmPageState extends State<AlarmPage> {
                             end: Alignment.centerRight,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(12)),
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //       color: Colors.yellow,
-                          //       blurRadius: 5,
-                          //       spreadRadius: 2,
-                          //       offset: Offset(0, 0))
-                          // ]),
+       
                       ),
                       height: 100,
                       child: FlatButton(
