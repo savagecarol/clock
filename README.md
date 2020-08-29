@@ -1,6 +1,8 @@
 # clock
 
-A new Flutter project.
+![Screenshot_1598659349](https://user-images.githubusercontent.com/56194329/91623493-560aee80-e9b9-11ea-92ed-ef5e523ce85b.png)
+![Screenshot_1598659355](https://user-images.githubusercontent.com/56194329/91623495-5905df00-e9b9-11ea-8578-5135ffddacb5.png)
+
 
 ## Getting Started
 
